@@ -2,12 +2,13 @@ import os, random, io, asyncio, html, requests, datetime as dt
 from PIL import Image, ImageDraw, ImageFont
 from telegram import Bot, InputFile
 from zoneinfo import ZoneInfo
+import os
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────────
 BOT_TOKEN  = os.getenv("BOT_TOKEN")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 
-FONT_PATH  = r"C:\Windows\Fonts\ARLRDBD.TTF"
+FONT_PATH = os.path.join(os.path.dirname(__file__), "ARLRDBD.TTF")
 KYIV       = ZoneInfo("Europe/Kyiv")
 MIN_AMOUNT = 200
 MAX_AMOUNT = 1500
